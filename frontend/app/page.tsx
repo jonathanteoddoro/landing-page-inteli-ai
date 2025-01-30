@@ -9,6 +9,7 @@ import Link from "next/link"
 import { useEffect, useState } from "react"
 import { motion } from 'framer-motion'
 import { Swords } from 'lucide-react'
+import { FolderGit } from 'lucide-react';
 
 export default function LandingPage() {
   const [isVisible, setIsVisible] = useState(false)
@@ -23,13 +24,13 @@ const leaders = [
     name: 'Jonathan Teodoro',
     role: 'Presidente',
     image: '/jonathan.jpg',
-    bio: 'Aluno de Ciência da Computação.',
+    bio: 'Aluno de Ciência da Computação',
   },
   {
     name: 'Pedro Pinheiro',
     role: 'Vice Presidente',
     image: '/pedro.jpeg',
-    bio: 'Aluno de Ciência da Computação.',
+    bio: 'Aluno de Ciência da Computação',
   },
   {
     name: 'Pietra Baptista',
@@ -58,17 +59,17 @@ const leaders = [
 ]
 const modules = [
   {
-    title: "Módulo 1",
+    title: "módulo 1",
     description: "Fundamentos de Programação em Python e Machine Learning",
     icon: Code,
   },
   {
-    title: "Módulo 2",
+    title: "módulo 2",
     description: "Inteligência Artificial Generativa e Aplicações Práticas",
     icon: Cpu,
   },
   {
-    title: "Módulo 3",
+    title: "módulo 3",
     description: "IA Preditiva, Deep Learning, Visão Computacional e Processamento de Linguagem Natural",
     icon: Brain,
   },
@@ -92,8 +93,8 @@ const modules = [
         priority
       />
       <h1 className="mb-6 text-3xl sm:text-6xl font-bold tracking-tight">
-        Impulsionando o futuro com
-        <span className="block text-white">Inteligência Artificial</span>
+        impulsionando o futuro com
+        <span className="block text-white">inteligência artificial</span>
       </h1>
       <p className="mx-auto mb-8 max-w-3xl text-lg text-zinc-300"> 
         A liga de IA do Inteli dedicada a explorar e desenvolver soluções de ponta em Inteligência Artificial, promovendo a inovação e formando a próxima geração de líderes em IA.
@@ -148,7 +149,7 @@ const modules = [
     
     <div className="flex flex-col md:flex-row gap-8 items-start">
       <div className="flex-1">
-      <h2 className="text-3xl md:text-4xl font-bold mb-2">O que é a inteli.ai?</h2>
+      <h2 className="text-3xl md:text-4xl font-bold mb-2">o que é a inteli.ai?</h2>
       <div className="w-20 h-1 bg-black mb-6"></div>
         <p className="text-lg mb-4">
           A inteli.ai é uma liga de inovação dedicada a explorar e desenvolver as fronteiras da Inteligência Artificial. Nossa missão é capacitar estudantes e profissionais a se tornarem líderes na revolução da IA, promovendo aprendizado prático e colaboração.
@@ -161,10 +162,10 @@ const modules = [
       <div className="flex-1">
         <div className="flex flex-wrap gap-4">
           {[
-            { icon: Cpu, text: 'Tecnologia de Ponta' },
-            { icon: Brain, text: 'Aprendizado Contínuo' },
-            { icon: BarChart, text: 'Projetos Inovadores' },
-            { icon: Swords, text: 'Competições' },
+            { icon: Cpu, text: 'tecnologia de ponta' },
+            { icon: Brain, text: 'aprendizado contínuo' },
+            { icon: FolderGit, text: 'projetos inovadores' },
+            { icon: Swords, text: 'competições' },
           ].map((item, index) => (
             <div 
               key={index} 
@@ -183,16 +184,19 @@ const modules = [
       {/* Projects Section */}
       <section id="estrutura" className="py-20 bg-white text-black">
       <div className="container mx-auto px-6">
-        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">Como Vai Funcionar?</h2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">como vai funcionar?</h2>
         <div className="grid md:grid-cols-2 gap-12">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="bg-white border p-8 rounded-lg"
+            className="bg-white border p-8 rounded-lg flex flex-col"
           >
+            <div className="flex flex-row items-center gap-4">
             <Book className="w-12 h-12 mb-4" />
-            <h3 className="text-xl font-semibold mb-4">Primeiro Ano</h3>
+            <h3 className="text-2xl font-semibold mb-4">primeira fase</h3>
+            </div>
+            
             <p>
               Três módulos focados em fundamentos de IA, aprendizado de máquina e processamento de linguagem natural. Aulas teóricas combinadas com exercícios práticos para solidificar o conhecimento.
             </p>
@@ -203,8 +207,10 @@ const modules = [
             transition={{ duration: 0.5, delay: 0.2 }}
             className="bg-white border p-8 rounded-lg"
           >
-            <Bot className="w-12 h-12 mb-4" />
-            <h3 className="text-xl font-semibold mb-4">Segundo Ano</h3>
+            <div className="flex flex-row items-center gap-4">
+            <Bot className="w-12 h-12 mb-4 flex flex-col" />
+            <h3 className="text-2xl font-semibold mb-4">segunda fase</h3>
+            </div>
             <p>
               Foco em projetos práticos e workshops avançados. Os participantes trabalharão em equipes para desenvolver soluções de IA para problemas do mundo real, com orientação de mentores da indústria.
             </p>
@@ -222,10 +228,9 @@ const modules = [
     </section>
     <section id="modulos" className="py-20 bg-[#f9fafb] text-black">
       <div className="container mx-auto px-6">
-        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">Módulos de Aprendizado</h2>
-        <p className="text-center mb-12 max-w-2xl mx-auto">
-          Os alunos do primeiro ano participarão de um ciclo de capacitação composto por três módulos, 
-          cada um com duração aproximada de dois meses, conforme descrito a seguir:
+        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">módulos de aprendizado</h2>
+        <p className="text-center mb-12 max-w-3xl mx-auto">
+        Os alunos da primeira fase passarão por três módulos intensivos de dois meses cada. Ao fim de cada etapa, poderão testar seus conhecimentos em desafios, hackathons e competições empolgantes!
         </p>
         <div className="grid md:grid-cols-3 gap-8">
           {modules.map((module, index) => (
@@ -241,14 +246,60 @@ const modules = [
               <p className="text-sm">{module.description}</p>
             </motion.div>
           ))}
+          
         </div>
+        <p className="text-center mb-12 max-w-2xl mx-auto">
+        </p>
       </div>
     </section>
+    <section id="segundo-ano" className="py-20 bg-white text-black">
+        <div className="container mx-auto px-6">
+          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">desenvolvimento de projeto</h2>
+          <p className="text-center mb-12 max-w-3xl mx-auto">
+            Na segunda fase, os alunos terão a oportunidade de mergulhar em um projeto inovador de IA, culminando em uma
+            apresentação estilo Shark Tank para especialistas, investidores e entusiastas.
+          </p>
+          <div className="grid md:grid-cols-3 gap-8">
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="border p-6 rounded-lg bg-gray-100 shadow-lg"
+            >
+              <h3 className="text-xl font-semibold mb-4">4-6 meses de Projeto</h3>
+              <p>Tempo dedicado para desenvolver um projeto de IA inovador e impactante.</p>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="border p-6 rounded-lg bg-gray-100 shadow-lg"
+            >
+              <h3 className="text-xl font-semibold mb-4">Acompanhamento dos Projetos</h3>
+              <p>Encontros regulares para orientação, feedback e suporte no desenvolvimento dos projetos.</p>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              className="border p-6 rounded-lg bg-gray-100 shadow-lg"
+            >
+              <h3 className="text-xl font-semibold mb-4">Workshops com Especialistas</h3>
+              <p>Sessões exclusivas com profissionais da indústria para aprofundar conhecimentos e insights.</p>
+            </motion.div>
+          </div>
+          <div className="mt-12 text-center">
+            <p className="text-lg font-semibold">
+              Prepare-se para apresentar seu projeto inovador de IA para especialistas, investidores e entusiastas!
+            </p>
+          </div>
+        </div>
+      </section>
 
       {/* Contact Section */}
       <section id="liderança" className="py-20 bg-[#1f1f1f]">
       <div className="container mx-auto px-6">
-        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">Quem Somos?</h2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">quem somos?</h2>
         <div className="grid md:grid-cols-3 gap-8">
           {leaders.map((leader, index) => (
             <motion.div
@@ -279,17 +330,15 @@ const modules = [
     <section className="py-24 bg-gray-100">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-16 text-black">Entre em Contato</h2>
-            <div className="space-y-4">
-              <Input type="email" placeholder="Email" className="border-zinc-800" />
-              <Textarea
-                placeholder="Message"
-                className="border-zinc-800 min-h-[150px]"
-              />
-              <Button size="lg" className="w-full bg-[#1f1f1f] text-white hover:bg-zinc-200">
-                Send Message
+            <h2 className="text-3xl font-bold mb-8 text-black">manifestar interesse</h2>
+            <p className="text-center mb-8 max-w-2xl mx-auto text-black">
+              Caso tenha interesse em participar da inteli.ai, clique no botão abaixo para preencher o formulário.
+            </p>
+            <Link href="https://forms.gle/nDG7LbCF5occkfeE9" target="_blank" rel="noopener noreferrer">
+              <Button size="lg" className="bg-[#1f1f1f] text-white hover:bg-zinc-700">
+                preencher formulário
               </Button>
-            </div>
+            </Link>
             <div className="mt-8 flex justify-center gap-4">
               <Link href="#" className="text-zinc-400 hover:text-black hover:scale-110">
                 <Mail className="w-6 h-6" />
